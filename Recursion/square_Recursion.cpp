@@ -24,17 +24,22 @@ int pow(int x, int n)
 //     return 0;
 // }
 
-// This is for printing n natural numbers using recursion.
+// This is for printing sum of n natural numbers using recursion.
 
 int num(int n){
     if(n==0){
         return 0;
     }
-    return n+num(n+1);
+    return n+num(n-1);
 }
 int main(int argc, char const *argv[])
 {
     int n;
+    cout<<"Enter the number: ";
+    cin>>n;
 
+    int res=num(n);
+
+    cout<<"Sum of first 5 natural number is: "<<res<<endl;
     return 0;
 }
